@@ -1,14 +1,17 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
-import {latestNews, articleNews} from '../actions/actionFile'
-import ArticleDisplay from '../components/Home/articleDisplay'
-import LatestDisplay from '../components/Home/latestDisplay'
+import {latestNews, articleNews, galleryNews} from '../actions/actionFile'
+import ArticleDisplay from '../components/Home/ArticleDisplay'
+import LatestDisplay from '../components/Home/LatestDisplay'
+import GalleryDisplay from '../components/Home/GalleryDisplay'
+
 
 class Home extends React.Component{
     componentDidMount(){
         this.props.dispatch(latestNews())
         this.props.dispatch(articleNews())
+        this.props.dispatch(galleryNews())
     }
 
     render(){
@@ -16,6 +19,7 @@ class Home extends React.Component{
             <div>
                 <LatestDisplay ldata = {this.props.dataList.latestNews} />
                 <ArticleDisplay adata = {this.props.dataList.articleNews} />
+                <GalleryDisplay gdata = {this.props.galleryList.galleryNews} />
             </div>
         )
     }
@@ -23,7 +27,8 @@ class Home extends React.Component{
 }
 function mapStateToProps(state){
     return {
-        dataList: state.article
+        dataList: state.article,
+        galleryList: state.gallery
     }
     
 }
