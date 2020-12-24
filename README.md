@@ -5,6 +5,11 @@
 Clone this repo
 Run this command `npm install`
 
+## Run these Commands to get started
+
+    npm run server
+    npm start
+
 ## Packages used
 
     redux
