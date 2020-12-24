@@ -1,13 +1,12 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import PropTypes from 'prop-types'
-import {latestNews, articleNews, galleryNews} from '../actions/actionFile'
-import ArticleDisplay from '../components/Home/ArticleDisplay'
-import LatestDisplay from '../components/Home/LatestDisplay'
-import GalleryDisplay from '../components/Home/GalleryDisplay'
+import {latestNews, articleNews, galleryNews} from '../../redux/actions'
+import ArticleDisplay from './ArticleDisplay'
+import LatestDisplay from './LatestDisplay'
+import GalleryDisplay from './GalleryDisplay'
 
 
-class Home extends React.Component{
+class Index extends React.Component{
     componentDidMount(){
         this.props.dispatch(latestNews())
         this.props.dispatch(articleNews())
@@ -33,4 +32,4 @@ function mapStateToProps(state){
     
 }
 
-export default connect(mapStateToProps)(Home)
+export default connect(mapStateToProps)(Index)

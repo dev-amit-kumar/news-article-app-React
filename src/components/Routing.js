@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Route } from 'react-router-dom'
-import Home from '../container/Home'
-import NewsDetails from '../container/NewsDetails'
+import Index from './Home/'
+import NewsDetails from './NewsDetails'
 import Header from './Header'
 import Footer from './Footer'
 
@@ -9,7 +9,7 @@ const Routing = () => {
     return (
         <BrowserRouter>
             <Header/>
-            <Route exact path="/" component={Home}/>
+            <Route exact path="/" component={Index}/>
             <Route exact path="/details/:id" component={NewsDetails}/>
             <Footer/>
         </BrowserRouter>

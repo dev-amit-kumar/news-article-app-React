@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
-import {selectedNews} from '../actions/actionFile';
+import {selectedNews} from '../redux/actions';
 
 class NewsDetails extends Component{
     componentDidMount(){
