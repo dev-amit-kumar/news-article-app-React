@@ -1,4 +1,4 @@
-# Getting Started with NEWS ARTICLE APP
+# NEWS ARTICLE APP
 
 ## How to start with the project
 
