@@ -14,9 +14,9 @@ const showGallery = ({gdata}) =>{
     if(gdata){
         return(
             <Slider {...settings}>
-                {gdata.map((item) => {
+                {gdata.map((item, idx) => {
                     return(
-                        <Link to="/" className="slider-item">
+                        <Link to={`/gdetails/${item.id}`} className="slider-item" key={idx}>
                             <div className="image" style={{background:`url(/images/galleries/${item.images[0].img})`}}/>
                         </Link>
                     )

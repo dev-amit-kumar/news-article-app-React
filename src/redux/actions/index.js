@@ -38,3 +38,13 @@ export function selectedNews(id){
         payload: output
     }
 }
+
+export function selectedGallery(id){
+    const output = fetch(`${base_url}/galleries?id=${id}`, {method : 'GET'})
+    .then((data) => data.json())
+
+    return {
+        type: 'SELECTED_GALLERY',
+        payload: output
+    }
+}
